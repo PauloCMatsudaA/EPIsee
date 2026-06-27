@@ -1,4 +1,4 @@
-# Guia de Setup — Desenvolvimento Local
+# Guia de Setup para desenvolvimento Local
 
 Este guia detalha o processo completo para rodar o EPIsee em ambiente de desenvolvimento local.
 
