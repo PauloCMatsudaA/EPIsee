@@ -1,4 +1,4 @@
-# Arquitetura do Sistema — EPIsee
+# Arquitetura do Sistema
 
 ## Visão Geral
 
