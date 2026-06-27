@@ -4,31 +4,6 @@
 
 O EPIsee segue uma arquitetura de três camadas desacopladas, onde cada parte pode ser desenvolvida, testada e deployada de forma independente. A comunicação entre as camadas acontece exclusivamente via API REST com autenticação JWT.
 
-```
-Câmeras RTSP
-     │
-     ▼
-┌─────────────────────────────────────┐
-│  Server (FastAPI)                   │
-│                                     │
-│  ┌──────────┐   ┌─────────────────┐ │
-│  │  YOLOv8  │──▶│ Banco de Dados  │ │
-│  │ Engine   │   │ SQLite/Postgres  │ │
-│  └──────────┘   └─────────────────┘ │
-│                                     │
-│  ┌──────────┐   ┌─────────────────┐ │
-│  │  FFmpeg  │   │  Telegram Bot   │ │
-│  │ HLS out  │   │    Alertas      │ │
-│  └──────────┘   └─────────────────┘ │
-└────────────────┬────────────────────┘
-                 │ REST API (JSON + JWT)
-        ┌────────┴────────┐
-        ▼                 ▼
-┌──────────────┐  ┌───────────────────┐
-│ Client Web   │  │ Mobile App        │
-│ React + Vite │  │ React Native/Expo │
-└──────────────┘  └───────────────────┘
-```
 ![visão geral](assets/visaogeral.png)
 ---
 
