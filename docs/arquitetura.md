@@ -29,7 +29,7 @@ Câmeras RTSP
 │ React + Vite │  │ React Native/Expo │
 └──────────────┘  └───────────────────┘
 ```
-![visão geral](docs/assets/visaogeral.png)
+![visão geral](assets/visaogeral.png)
 ---
 
 ## Componentes
