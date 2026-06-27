@@ -189,12 +189,10 @@ Crie o arquivo `Server/.env` baseado em `Server/.env.example`:
 
 ```env
 # Banco de dados
-DATABASE_URL=sqlite:///./episee.db
-# Para produção (PostgreSQL):
-# DATABASE_URL=postgresql+asyncpg://usuario:senha@host:5432/episee
+DATABASE_URL=postgresql+asyncpg://usuario:senha@host:5432/episee
 
 # Segurança JWT
-SECRET_KEY=sua-chave-secreta-aqui
+SECRET_KEY=
 ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=1440
 
@@ -203,11 +201,11 @@ OPENAI_API_KEY=sk-...
 DEEPSEEK_API_KEY=sk-...
 
 # Telegram Bot (alertas)
-TELEGRAM_BOT_TOKEN=seu-token-aqui
+TELEGRAM_BOT_TOKEN=
 APP_URL=https://sua-url-publica.railway.app
 
 # Usuário admin padrão (criado na primeira execução)
-DEFAULT_ADMIN_EMAIL=admin@episee.com
+DEFAULT_ADMIN_EMAIL=admin@gmail.com
 DEFAULT_ADMIN_PASSWORD=senha-forte-aqui
 
 # Hugging Face (download automático do modelo)
@@ -219,8 +217,8 @@ HF_TOKEN=hf_...
 | `DATABASE_URL` | Sim | URL de conexão com o banco de dados |
 | `SECRET_KEY` | Sim | Chave para assinatura dos tokens JWT |
 | `TELEGRAM_BOT_TOKEN` | Não | Token do bot para alertas automáticos |
-| `OPENAI_API_KEY` | Não | Para o chatbot com GPT |
-| `DEEPSEEK_API_KEY` | Não | Alternativa ao OpenAI para o chatbot |
+| `OPENAI_API_KEY` | Não | Para usar text-to-speach e speach-to-text |
+| `DEEPSEEK_API_KEY` | Sim | Para usar o chatbot |
 | `HF_TOKEN` | Não | Necessário se o repositório HF for privado |
 
 ---
@@ -301,7 +299,7 @@ EPIsee/
 
 ## Modelo YOLO
 
-O modelo customizado (`best.pt`) foi treinado com o dataset **Construction Site Safety** e fine-tuned para o contexto de EPIs industriais. Ele detecta as seguintes classes:
+O modelo customizado (`best.pt`) foi treinado com o dataset **SH17** e fine-tuned para o contexto de EPIs industriais. Ele detecta as seguintes classes:
 
 | Classe | EPI |
 |---|---|
@@ -314,8 +312,14 @@ O modelo customizado (`best.pt`) foi treinado com o dataset **Construction Site 
 | `earmuffs` | Protetor auricular |
 | `medical-suit` | Macacão de proteção |
 | `safety-suit` | Roupa de segurança |
+| `shoes` | Calçado de segurança |
 | `person` | Pessoa detectada |
 | `head` | Cabeça (para inferir ausência de capacete) |
+| `face` | Rosto (para inferir EPIs faciais) |
+| `ear` | Orelha (para inferir ausência de protetor auricular) |
+| `hands` | Mãos (para inferir ausência de luvas) |
+| `foot` | Pé (para inferir ausência de calçado de segurança) |
+| `tools` | Ferramentas (contexto operacional) |
 
 O modelo está hospedado publicamente no Hugging Face: [MatsudaPaulo/episeeyolo](https://huggingface.co/MatsudaPaulo/episeeyolo).
 
@@ -368,5 +372,5 @@ A documentação completa e interativa está disponível em `/docs` (Swagger UI)
 --------
 
 <div align="center">
-  Desenvolvido por <a href="https://github.com/PauloCMatsudaA">Paulo Matsuda</a> — TCC Engenharia de Software · Campo Real
+  Desenvolvido por <a href="https://github.com/PauloCMatsudaA">Paulo Matsuda</a> TCC Engenharia de Software · Campo Real
 </div>
