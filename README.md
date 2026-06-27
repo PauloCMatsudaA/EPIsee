@@ -48,7 +48,7 @@ EPIsee resolve um problema crítico em ambientes industriais: garantir que os tr
 
 ### Detecção em Tempo Real
 - Monitoramento de câmeras IP via protocolo RTSP
-- Inferência com YOLOv8 customizado para 10+ classes de EPIs
+- Inferência com YOLOv8
 - Streaming HLS para visualização ao vivo no dashboard
 - Detecção por setor com EPIs obrigatórios configuráveis por gestor
 
@@ -59,7 +59,7 @@ EPIsee resolve um problema crítico em ambientes industriais: garantir que os tr
 - Gestão de setores e câmeras
 - Solicitações de EPI com fluxo de aprovação
 - Relatórios exportáveis em PDF
-- Vídeos de treinamento por tipo de EPI (NR-6)
+- Vídeos de treinamento por tipo de EPI
 - Notificações em tempo real
 
 ### App Mobile (React Native / Expo)
@@ -72,7 +72,7 @@ EPIsee resolve um problema crítico em ambientes industriais: garantir que os tr
 ### Alertas e Integrações
 - Alertas automáticos via **Telegram** quando há não-conformidade
 - Notificações internas no sistema
-- Chatbot com IA (DeepSeek/OpenAI) para suporte a trabalhadores
+- Chatbot com IA (DeepSeek/OpenAI) usando RAG para suporte a trabalhadores
 
 ---
 
