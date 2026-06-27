@@ -28,7 +28,7 @@ EPIsee é uma plataforma completa de segurança do trabalho que utiliza YOLOv8 p
 - [Variáveis de Ambiente](#variáveis-de-ambiente)
 - [Estrutura do Projeto](#estrutura-do-projeto)
 - [Modelo YOLO](#modelo-yolo)
-- [API: Endpoints Principais](#api:-endpoints-principais)
+- [API- Endpoints Principais](#api--endpoints-principais)
 - [Deploy](#deploy)
 - [Contribuição](#contribuição)
 - [Licença](#licença)
