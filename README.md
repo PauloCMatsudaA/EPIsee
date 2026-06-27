@@ -78,37 +78,6 @@ EPIsee resolve um problema crítico em ambientes industriais: garantir que os tr
 
 ## Arquitetura
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                    Câmeras IP (RTSP)                    │
-└────────────────────────┬────────────────────────────────┘
-                         │ stream
-                         ▼
-┌─────────────────────────────────────────────────────────┐
-│              Server — FastAPI (Python)                  │
-│                                                         │
-│  ┌──────────────┐  ┌─────────────┐  ┌───────────────┐  │
-│  │ YOLOv8 Model │  │  SQLAlchemy │  │  HLS Streams  │  │
-│  │  (best.pt)   │  │  + Alembic  │  │   (FFmpeg)    │  │
-│  └──────────────┘  └─────────────┘  └───────────────┘  │
-│                                                         │
-│  REST API · JWT Auth · WebSocket · Telegram Bot         │
-└───────────┬───────────────────────────┬─────────────────┘
-            │ HTTP/REST                 │ HTTP/REST
-            ▼                           ▼
-┌───────────────────┐       ┌───────────────────────────┐
-│   Client (React)  │       │   Mobile (React Native)   │
-│   Vite + Tailwind │       │      Expo SDK 54           │
-│   Dashboard Web   │       │   App iOS / Android        │
-└───────────────────┘       └───────────────────────────┘
-            │
-            ▼ Telegram
-┌───────────────────┐
-│   Alertas Bot     │
-│   Telegram API    │
-└───────────────────┘
-```
-
 ![Arquitetura](docs/assets/arquiteturaepi.png)
 
 O backend é o núcleo do sistema: recebe os streams RTSP, executa a inferência YOLOv8 frame a frame, persiste as ocorrências no banco de dados PostgreSQL em prod e expõe uma API REST consumida pelo dashboard e pelo app mobile.
