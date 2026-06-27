@@ -112,7 +112,7 @@ O backend é o núcleo do sistema: recebe os streams RTSP, executa a inferência
 - **FFmpeg** instalado no sistema (`apt install ffmpeg` / `brew install ffmpeg`)
 - **Git**
 - Conta no [Hugging Face](https://huggingface.co) para baixar o modelo (ou o modelo `best.pt` local)
-- (Opcional) Docker para containerização
+
 
 ---
 
