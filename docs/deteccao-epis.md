@@ -1,4 +1,4 @@
-# Detecção de EPIs — Como Funciona
+# Detecção de EPIs
 
 ## Visão Geral
 
