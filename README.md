@@ -109,7 +109,7 @@ EPIsee resolve um problema crítico em ambientes industriais: garantir que os tr
 └───────────────────┘
 ```
 
-![Arquitetura](docs/assets/arquitetura.png)
+![Arquitetura](docs/assets/arquiteturaepi.png)
 
 O backend é o núcleo do sistema: recebe os streams RTSP, executa a inferência YOLOv8 frame a frame, persiste as ocorrências no banco de dados PostgreSQL em prod e expõe uma API REST consumida pelo dashboard e pelo app mobile.
 
