@@ -1,4 +1,4 @@
-# Referência da API — EPIsee
+# Referência da API
 
 A API segue o padrão REST com payloads JSON. Todos os endpoints (exceto `/api/auth/login`) exigem o header:
 
