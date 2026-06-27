@@ -101,7 +101,6 @@ O backend é o núcleo do sistema: recebe os streams RTSP, executa a inferência
 | PDF | jsPDF + html2canvas | — |
 | Mobile | React Native + Expo | 0.81 / 54 |
 | Navegação mobile | React Navigation (stack + tabs) | 6.x |
-| Deploy | Railway (backend + frontend) | — |
 
 ---
 
