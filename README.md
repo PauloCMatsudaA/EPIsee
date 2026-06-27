@@ -90,7 +90,7 @@ O backend é o núcleo do sistema: recebe os streams RTSP, executa a inferência
 |---|---|---|
 | Backend | FastAPI + Uvicorn | 0.115 / 0.30 |
 | ORM | SQLAlchemy (async) + Alembic | 2.0 / 1.13 |
-| Banco de dados | SQLite (dev) / PostgreSQL (prod) | — |
+| Banco de dados | PostgreSQL (prod) | — |
 | Visão computacional | Ultralytics YOLOv8 + OpenCV | 8.3.40 / 4.10 |
 | Streaming | FFmpeg + HLS | — |
 | Autenticação | JWT (python-jose + passlib) | — |
