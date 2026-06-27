@@ -338,7 +338,7 @@ A documentação completa e interativa está disponível em `/docs` (Swagger UI)
 ### Autenticação
 | Método | Endpoint | Descrição |
 |---|---|---|
-| `POST` | `/api/auth/login` | Login — retorna token JWT |
+| `POST` | `/api/auth/login` | Login: retorna token JWT |
 | `GET` | `/api/auth/me` | Dados do usuário autenticado |
 
 ### Detecção
